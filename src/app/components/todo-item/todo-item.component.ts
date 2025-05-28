@@ -12,8 +12,8 @@ export class TodoItemComponent {
   @Input()
 todo?: Todo;
 
-onRichiestaCompletamento= output<number>();
-richiediCompletamento(){
+onRichiestaCompletamento= output<number>();//creo il dispositivo che puo generare un evento, in questo caso un numero che rappresenta l'id del todo
+richiediCompletamento(){// metodo che viene chiamato quando l'utente clicca sul pulsante di completamento
   this.onRichiestaCompletamento.emit(this.todo!.id);
 }
 }
