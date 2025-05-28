@@ -1,0 +1,10 @@
+@if(todo){
+<div class="d-flex justify-content-between align-items-center">
+  <span [ngClass]="{ 'text-decoration-line-through': todo.completed }">{{
+    todo.text
+  }}</span>
+  <button type="text" class="btn btn-success">
+    <i class="bi bi-check"></i>
+  </button>
+</div>
+}
