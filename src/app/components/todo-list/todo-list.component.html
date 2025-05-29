@@ -1,5 +1,13 @@
 <div class="list-group">
   @for(t of todos; track $index) {
-  <app-todo-item class="list-group-item" [todo]="t"></app-todo-item>
+  <app-todo-item
+    class="list-group-item"
+    [todo]="t"
+    (onRichiestaCompletamento)="completa($event)"
+  ></app-todo-item>
   }
 </div>
+<hr />
+<app-todo-add
+  (onRichiestaInserimento)="inserisciNuovoTodo($event)"
+></app-todo-add>
